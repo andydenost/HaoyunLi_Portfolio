@@ -1,0 +1,1116 @@
+<!--THE name ON inkd-content IS USED TO ADD THE STORY
+    TO YOUR index.html. THE inkd-include TAG in index.html
+    LOADS THE inkd-content WITH THE MATCHING name PROPERTY.
+-->
+
+<inkd-content name="cyoa">
+    <inkd-audio src="audios/stamp.wav" name="stamp"></inkd-audio>
+    <inkd-audio src="audios/war2.mp3" name="war2"></inkd-audio>
+    <inkd-audio src="audios/killgarbo.mp3" name="killgarbo"></inkd-audio>
+    <inkd-audio src="audios/logcabin.mp3" name="logcabin"></inkd-audio>
+    <inkd-audio src="audios/lostfamily.mp3" name="lostfamily" loop></inkd-audio>
+    <inkd-audio src="audios/poison.mp3" name="poison"></inkd-audio>
+    <inkd-audio src="audios/stalk1.mp3" name="stalk1" loop volume="0.5"></inkd-audio>
+    <inkd-audio src="audios/stalk2.mp3" name="stalk2" loop></inkd-audio>
+    <inkd-audio src="audios/happyending.mp3" name="happyending"></inkd-audio>
+    <inkd-audio src="audios/bgm.mp3" name="bgm" loop volume="0.1"></inkd-audio>
+    <inkd-audio src="audios/fail.wav" name="fail"></inkd-audio>
+
+    <!--inkd-cyoa HOLDS THE STORY. YOU DON'T NEED TO CHANGE
+        THIS NAME UNLESS YOU ARE COMBINING MULTIPLE STORIES
+        INTO ONE BIGGER PROJECT
+    -->
+    <image class="background-node-img" style="background-color:black">
+        <inkd-cyoa name="main" set-prop="hadtest=false">
+
+            <inkd-node name="1" play-audio="stamp,bgm" set-prop="hadtest=false" start>
+                <lhy-background style="background-image: url(images/1-2.png);"></lhy-background>
+                <inkd-box animation="wait:1.6s,fadeIn:0.1s:1">
+                    <img style="position:fixed;top:100px;left:420px;width:600px;" src="images/1-5.png">
+                </inkd-box>
+                <inkd-box animation="wait:2.5s,fadeIn:2s:1">
+                    <inkd-action class="start-button" goto="2">
+                        <inkd-mouse>
+                            <img src="images/1-4-button.png">
+                            <inkd-over>
+                                <img src="images/1-3-button.png">
+                            </inkd-over>
+                        </inkd-mouse>
+                    </inkd-action>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="2" play-audio="war2">
+                <inkd-box style="position:fixed; width:100%; height:100%; " animation="wait:1s, fadeOut:1s:1 ">
+                    <lhy-background style="background-image: url(images/1-2.png);"></lhy-background>
+                    <img style="position:fixed;top:100px;left:420px;width:600px;" src="images/1-5.png">
+                    <img class="start-button" src="images/1-3-button.png">
+                </inkd-box>
+                <inkd-box style="position:fixed; width:100%; height:100%;" animation="wait:22s, fadeOut:2s:1 ">
+                    <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:2s, fadeIn:2s:1">
+                        <lhy-background style="background-image: url(images/2-1.png);">
+                    </inkd-box>
+                    <inkd-box style="position:fixed; width:100%; height:100%; " animation="wait:14s, fadeOut:2s:1 ">
+                        <inkd-box style="position: fixed; width:100%; height:100%; top:0; " animation="wait:4s, slideInRight:2s:1 ">
+                            <lhy-background style="background-image: url(images/2-2.png); ">
+                        </inkd-box>
+                        <inkd-box style="position: fixed; width:100%; height:100%;top:0; " animation="wait:6s, rotateInDownLeft:2s:1 ">
+                            <lhy-background style="background-image: url(images/2-4.png); ">
+                        </inkd-box>
+                        <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:8s, zoomIn:2s:1 ">
+                            <lhy-background style="background-image: url(images/2-5.png); ">
+                        </inkd-box>
+                        <inkd-box animation="wait:10s, fadeIn:2s:1">
+                            <lhy-bgi>On July 17, 1936, Spanish soldiers in their Moroccan barracks stages a revolt.<br> The spanish civil war begins.<br>
+                            </lhy-bgi>
+                        </inkd-box>
+                    </inkd-box>
+                    <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:16s, fadeIn:2s:1 ">
+                        <lhy-background style="background-image: url(images/2-1.png); ">
+                    </inkd-box>
+                    <inkd-box style="position: fixed; width:100%; height:100%; top:0;" animation="wait:18s, slideInRight:2s:1 ">
+                        <lhy-background style="background-image: url(images/2-6.png);">
+                    </inkd-box>
+                </inkd-box>
+                <inkd-box style="width:100%;text-align:center; position:absolute;top:50%;left:50%;transform:translate(-50%,-50%); " animation="wait:24s, zoomIn:2s:1 ">
+                    <inkd-action style="font-size:2rem; color:white;line-height:180%; " goto="intro">On September 1, 1939, German’s tank squad invades Poland.<br> It marks the beginning of World War II. </inkd-action>
+                </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="intro">
+                <inkd-action style="position:fixed;top:0;left:300px;" goto="3-1-a">
+                    <inkd-mouse>
+                        <img style="height:750px;" src="images/introb.png ">
+                        <inkd-over>
+                            <img style="height:750px; " src="images/intro.png ">
+                            <lhy-div style="postion:fixed; width:300px;left:600px;top:100px;bottom:auto;">
+                                Garbo is a Spanish farmer who is brave, thoughtful and kind. Also he is very imaginative and antiwar. The Second World War starts after years of Spanish civil war, then Garbo wants to devote himself into the career contributes to humanity.
+                            </lhy-div>
+                        </inkd-over>
+                    </inkd-mouse>
+                </inkd-action>
+            </inkd-node>
+
+            <!--
+            <inkd-node name="3-1-a">
+                <lhy-background style="background-image: url(images/3-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:2s,fadeIn:1s ">
+                                Garbo decides to volunteer as a spy.<br> He is interviewed by government official in the British embassy.<br> However...
+                                <br> He is declined.<br>
+                                <inkd-action goto="4-1">
+                                    <img style="width:20%; " src="images/gotonext.gif">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>·······································································
+                    </inkd-box>
+            </inkd-node>
+-->
+
+            <inkd-node name="3-1-a">
+                <lhy-background style="background-image: url(images/3-1.png); ">
+                    <inkd-box class="lhy-box" animation="wait:2s, fadeIn:1s">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo decides to volunteer as a spy.<br> He is interviewed by government official in the British embassy.<br> However...
+                                <br> He is declined.<br>
+                                <inkd-action goto="4-1">
+                                    <img style="width:20%; " src="images/gotonext.gif">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="4-1">
+                <lhy-background style="background-image: url(images/4-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo calls the German embassy.<br> The voice on the line, Fredrico, tells him to show up the following day at a cafe shop at 4:30.<br>
+                                <inkd-action goto="4-2">
+                                    <img style="width:20%; " src="images/gotonext.gif">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="4-2">
+                <lhy-background style="background-image: url(images/4-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo declares that he wants to be a spy for the Axis. Fred asks garbo what are his reasons.<br> Garbo has to explain why he can be a perfect spy.<br>
+                                <inkd-action class="lhy-mag " goto="3-2"> He says:"My whole family back in Spain are passionate about Facism." </inkd-action>
+                                <inkd-action class="lhy-mag " goto="5-1"> He says:"I have an English passport." </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="3-2" set-prop="hadtest=true ">
+                <lhy-background style="background-image: url(images/3-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s">
+                                The German investigator, Fred, goes to garbo’s hometown. He finds out that Garbo’s family members are confined by the Nazis. In his house, there is not a sign about Facism. Fred is very suspicious of Garbo.<br>
+                                <inkd-action goto="8-1-a">
+                                    <img style="width:20%; " src="images/gotonext.gif">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-1-a">
+                <lhy-background style="background-image: url(images/8-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                He goes back and calls in Garbo to talk with him. Fred and Garbo meet in Fred’s office.<br>
+                                <inkd-action class="lhy-mag " goto="8-3-a">Salutes to the Nazi flag. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="8-3-b">Stands still wait for Fred to talk to him. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-3-a">
+                <lhy-background style="background-image: url(images/8-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred has a poker face, talks to his assistant in German that "poor guy, he walks into his tomb!” Fred’s assistant asks him why. I have investigated in his hometown. He must be a spy. He will be killed immediately.<br>
+                                <inkd-action class="lhy-mag " goto="b-1"> Garbo remains silent, he looks normal. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="8-9"> Garbo is out of reflex, Garbo swallows hard, his face turns deathly pale. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-1">
+                <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s">
+                    <lhy-div>
+                        <inkd-box animation="wait:2s,fadeIn:1s">
+                            Fred tells Garbo, he went to his house and knows his family members are taken away by the Facists. Fred shouts: "There is no sign in your house that you are a facists fanantic. You must be a liar."<br>
+                            <inkd-action goto="8-2">
+                                <img style="width:20%;" src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-2">
+                <lhy-background style="background-image: url(images/8-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo explains that he has to pretend to be a nationalist to escape from persecution. Now, he wants to join the Axis in order to make his dream come true and also in the hope of releasing his family. <br>
+                                <inkd-action goto="8-6-a">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-6-a">
+                <lhy-background style="background-image: url(images/8-6.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred decides to send Garbo to jail first. <br>
+                                <inkd-action class="lhy-mag " goto="8-1-b"> Garbo pretends to pray to Nazi symbol he draws on the ground. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="8-4"> Garbo kneels down on the ground, pressing hands together in prayer. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-1-b">
+                <lhy-background style="background-image: url(images/8-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred observes Garbo's behavior and decides to talk with him once again. He calls Garbo into his office and talks to him in Germany:”you are now officially an spy for the great Axis!"
+                                <br>
+                                <inkd-action class="lhy-mag " goto="7-4"> Garbo hesitates, he seems to not understand Germany.</inkd-action>
+                                <inkd-action class="lhy-mag " goto="7-4"> Garbo cheers up and thanks Fred. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-4">
+                <lhy-background style="background-image: url(images/7-4.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred embarassingly laughs it off telling Garbo that he has been hired as a spy in Spanish. Fred gives Garbo a bottle of invisble ink, a code book and 3 months of expenses.<br>
+                                <inkd-action goto="5-1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-4">
+                <lhy-background style="background-image: url(images/8-4.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred’s assistants arrest him forcing him to kneel down. Meanwhile, Garbo’s mom, sister, his wife and son are sent into Fred’s office in hand-cuffs. Fred laughs scornfully: “I have suspected that your a spy. Now let me show you what are the consequences when you play with fire.”<br>
+                                <inkd-action goto="8-5">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-5" play-audio="poison">
+                <lhy-background style="background-image: url(images/8-5.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Upon finishing his sentence, Fred has Garbo’s family sent to a dark chamber. Garbo’s three year old son cries out loud:” papa, papa, papa...” Garbo strives to shake off his shackles but he is steadily held still by two big soldiers. Fred orders his assistant to release poisonous gas into the chamber.<br>
+                                <inkd-action class="lhy-mag " goto="b-2"> Garbo is on his knees desperately screaming "please no, please, torture me instead!” </inkd-action>
+                                <inkd-action class="lhy-mag " goto="confess"> Garbo walks to Fred, confessing to him </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="confess">
+                <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:3s,fadeIn:1s">
+                            Please let go of my family, I am willing to tell you all the secret information I know about the British, I can be a double agent for you. My British spy identity can help you cope with the British even better.<br>
+                            <inkd-action goto="5-1">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-2" play-audio="lostfamily">
+                <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:2s,fadeIn:1s ">
+                            Meanwhile, from the chamber, Garbo’s son cries hysterically, his wife screams for help, his sister bangs her head on the wall. They German soldiers stand still making sure procedures are followed strictly. They are uncorncerd about what is happening in the chamber. They have been hardened by this daily practice. Garbo walks on his knees, Fred kicks Garbo in his rib cage with such force, Garbo lays paralyzed on the ground. “How dare you lying to the great Axis. You should have known what you are asking for!” Slowly, the chamber becomes so quiet that you can hear a pin drop sending chills down the spine.<br>
+                            <inkd-action goto="7-5">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-5">
+                <lhy-background style="background-image: url(images/7-5.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo is burning with hatred. Fred pokes Garbo with his feet demanding:” what do you know what the British and the Allies? Tell me everything you know otherwise you would super worse then these in the chamber!” As if something crosses Garbo’s mind, a eerie smile appears on Garbo’s face. He leaps up bitting Fred’s finger off. Fred screams from vehement pain. A soilder knocks Garbo out.<br>
+                                <inkd-action goto="8-6-b">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-6-b">
+                <lhy-background style="background-image: url(images/8-6.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred is burning with a fenzy rage:” send him to the chamber.Torture him with the worst means!” Garbo is sent to a dark room. Nazi soldiers torture him in the hope that they can get some useful information. However, Garbo comes from a very modest background, he knows nothing about the Allies. He shuts his mouth close determinded he will revenge someday.<br>
+                                <inkd-action goto="8-7" pause-audio="lostfamily">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-7">
+                <lhy-background style="background-image: url(images/8-7.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                One day, Garbo hears something is rattling inside his wall, the wall gives in after a few minutes, a hand sticks out from the wall. It turns out that his inmate is trying to dig a tunnel to escape. However, he is pretty disoriented so he gauges wrong and ends up in Garbo’s room. Garbo and inmate talk to each other about their experiences. His inmate tells Garbo he used to be a priest for 50 years. But he gets caught several months ago by the Nazi. Now he is ridden with illness and does not think he can last longer. He tells Garbo he has a small cache of treasure burried in a island called Vendetta. He tells Garbo the exact location:” Please get it if you can make it out of here someday!”<br>
+                                <inkd-action class="lhy-mag " goto="9-2-a">Garbo reveals priest’s secret to the Germans. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="8-8"> Garbo chooses to be friends with priest.</inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="8-8">
+                <lhy-background style="background-image: url(images/8-8.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                The old priest dies the next day. It dawns on Garbo that he can uses this chance to survive. Garbo climbs into the sag for wrapping the body. The soldiers do not notice the change.<br>
+                                <inkd-action goto="9-1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-1">
+                <lhy-background style="background-image: url(images/9-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                They throw the body into the ocean. Garbo untangles himself from the sag and swims until he is exausted of all his strength. He wakes up thinking he must have been dead. He finds himself on a island so similar to the one the old detective has described to him. “It must be the vendetta island!” Garbo thinks out loud! The idea of revenge urges Garbo to keep looking for the place the old detective has told him.<br>
+                                <inkd-action goto="9-2-b">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-2-b">
+                <lhy-background style="background-image: url(images/9-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo searches for hours, he finds three wooden crates. One full of golden coins, one with jewelrys, one with diamonds. He becomes a billionaire instantly. Now his whole heart is occupied with the thought of revenge! He wants to kill Fred, and Hilter. But more importantly, he wants to stop them from killing hundereds of thousands of innocent people. Then, a boat is passing by.<br>
+                                <inkd-action class="lhy-mag " goto="9-3-b">Garbo decides to take all the three wooden crates away. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="9-5"> Garbo decides to take few diamond away. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-3-b" play-audio="killgarbo">
+                <lhy-background style="background-image: url(images/9-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                The Captain decides to kill Garbo and take away all his treasure.<br>
+                                <inkd-action goto="1">
+                                    <img style="width:20%; " src="images/restart.png">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-5">
+                <lhy-background style="background-image: url(images/9-5.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                He gives the captain all the diamonds he takes with him and asks the captain to take him back to Britain. Upon landing, Garbo takes a crew of people to fetch the treasure from the island. He changes all the jewelry and goes to MI5.<br>
+                                <inkd-action goto="9-6">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-6">
+                <inkd-box style="position: fixed; width:100%; height:100%; top:0;" animation="fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/9-6.png); ">
+                </inkd-box>
+                <inkd-box style="position: fixed; width:100%; height:100%; top:0;" animation="wait:3s, fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/9-7.png); ">
+                </inkd-box>
+                <!--                <lhy-background style="background-image: url(images/9-6.png); ">-->
+                <inkd-box class="lhy-box " animation="wait:6s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:7s,fadeIn:1s ">
+                            He told Harris, one of the commander, that “ my whole family was brutally murdered by the Nazis. I then escaped to a remote island and accidentally I found a treasure stash. I am willing to donate all I have now to MI5 for combatting the Nazis. My only request is that I have to destory the Nazis myself. You have to support me unconditionally.” Harris replies:” How can be of your service Sir?” Garbo:” I want to sneak into German’s barracks and providing you with secret information.” Harris gazes at this small little man and is amazed by his courage and strength. He arranged cosmetic surgery for Garbo to change his look. He sends Garbo along to German with one of cargo ship.<br>
+                            <inkd-action goto="9-8">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-8">
+                <lhy-background style="background-image: url(images/9-8.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo again calls the German embassy for an interview. He walks into Fred’s office. The past racing through his mind, He struggles to calm his mind controlling his anger. Upon seeing the nazi flag, Garbo salutes to the flag, paying homage to the Nazi. He tells Fred:” I have been working in London as a detective for years in the hope that I can gather some useful information about the Allies. I want to help the great Axis. Actually, I have known for a fact that the Allies have been trasporting weapons through the train near Calais.” Fred sends his troops to confirm wether the information is factual. They net 5 balconies of ammunitions.<br>
+                                <inkd-action goto="5-1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-2-a">
+                <lhy-background style="background-image: url(images/9-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s">
+                                Garbo tells Fred: “ If you release my family, I will let you know the secreat location of the hidden treasure, then you can use these to buy ammunition and supplies.
+                                <br>
+                                <inkd-action goto="9-3-a">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-3-a" play-audio="killgarbo">
+                <lhy-background style="background-image: url(images/9-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred does not believe in what Garbo says and decides to kill Garbo.
+                                <br>
+                                <inkd-action goto="1">
+                                    <img style="width:20%; " src="images/restart.png">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-3-b">
+                <lhy-background style="background-image: url(images/8-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred thinks to himself that it is so unusual Garbo does not hang any symbolic signs in his home about Nazi. Now even when he sees Nazi flag he does not even salute. He must have been lying when he claims that he is a Nazi fanatic. Fred puts on a poker face, druming his fingers on the table as if he is thinking about something. He turns to his assistant communicating to him in German:”poor guy!” his assistant asks him why. He replies:” How on earth would a liar put his head right into a noose? I have investigate on him, he must be a spy. I will have him excuted soon.” <br>
+                                <inkd-action goto="8-9">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="8-9">
+                <lhy-background style="background-image: url(images/8-9.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred suddenly raises his voice throwing a big tantrum. Garbo instantly knows that something has gone wrong.<br>
+                                <inkd-action class="lhy-mag " goto="b-1">Stands there and doesn’t know what happened. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="8-4">wants to run away. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-1">
+                <lhy-background style="background-image: url(images/5-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s">
+                                Garbo is instructed to go to London because of his passport, instead Garbo goes to Lisbon.<br>
+                                <inkd-action class="lhy-mag " goto="b-3"> Looks for a house for his wife and son. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="5-2"> Buys a british travel guide book. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="5-2"> Buys a copy of British map. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="5-2"> Buys a copy of british train schedule. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-2">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:3s, slideOutLeft:2s:1 ">
+                    <inkd-box style="position: fixed; width:100%; height:100%; " animation="slideInRight:2s:1 ">
+                        <lhy-background style="background-image: url(images/5-2.png); ">
+                    </inkd-box>
+                </inkd-box>
+
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:3s, slideInRight:2s:1 ">
+                    <lhy-background style="background-image: url(images/5-3.png); ">
+                </inkd-box>
+                </inkd-box>
+                <inkd-box class="lhy-box " animation="wait:6s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:7s,fadeIn:1s ">
+                            Garbo studies very hard to make stories, and German begin to rely on Garbo more and more each day. <br>
+                            <inkd-action goto="5-4">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="5-4">
+                <lhy-background style="background-image: url(images/5-4.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                However Fred notices that all the mails have Portugal stamps<br>
+                                <inkd-if rule="hadtest=false">
+                                    <inkd-action class="lhy-mag " goto="3-2"> Garbo says:" I have my own way to do this job, you just need to trust me, I have my reason." </inkd-action>
+                                </inkd-if>
+                                <inkd-action class="lhy-mag " goto="5-9"> Garbo says: "My agent is from Portugal and he wants to hide important info from the British." </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-3">
+                <inkd-box class="lhy-box " animation="fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:1s,fadeIn:1s ">
+                            Garbo spends a lot of time looking for a place to live and can’t have any realiable infromation, The German stops hiring him.<br>
+                            <inkd-if rule="hadtest=false">
+                                <inkd-action class="lhy-mag " goto="3-2"> Garbo calls Fred and persuade him to continue hiring him. </inkd-action>
+                            </inkd-if>
+                            <inkd-action class="lhy-mag " goto="la-1"> Garbo stays in Lisbon and starts to collects information about British. </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="la-1">
+                <lhy-background style="background-image: url(images/5-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Reports that a major army is departing Wales.
+                                <br>
+                                <inkd-action goto="ab-1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-9">
+                <lhy-background style="background-image: url(images/5-9.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred appreciates Garbo even more, thinks he is really capable. One day, Garbo reads a newspaper artcile about how the harbor is very busy in English. Then he looks up many information relating the Allies.<br>
+                                <inkd-action class="lhy-mag " goto="ab-1"> Garbo reports that a major army is departing Wales. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="ab-2"> Garbo tells the Germans that a convoy of five Allied ships have left Liverpool for Malta. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="ab-1">
+                <inkd-box class="lhy-box " animation="fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:1s,fadeIn:1s ">
+                            The convoy does not exist. But U-boats and Italian fighter planes scramble to defend it anyway, wasting tons of fuel and thousands of hours.<br>
+                            <inkd-action goto="5-5">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="ab-2">
+                <lhy-background style="background-image: url(images/5-7.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Little does Garbo know the made-up report is correct by accident.
+                                <br>
+                                <inkd-action goto="5-6">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-6">
+                <lhy-background style="background-image: url(images/5-6.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                then Britain’s spy agency the MI5 intercepted the message, agents are terrified. Now this grabs the Allies’ attention. In April 1942, the MI5, the intelligence agency of the allies, sneaks Garbo into London. The British commander Harris asks why Garbo wants to battle against Nazi.<br>
+                                <inkd-action class="lhy-mag " goto="5-7"> Garbo says: "My brother in France sees innocent Jewish people are murdered and he feels so bad and it also influences me. I decide to work for the good of humanity." </inkd-action>
+                                <inkd-action class="lhy-mag " goto="3-1-b"> Garbo says: "I just don’t like killing innocent people. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-7">
+                <lhy-background style="background-image: url(images/5-7.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Harris, the English gentle man with Jewsish background, thinks Garbo is really a good spy. With the help of the British, he makes really good stories and sends a lot of fake and real reports.<br>
+                                <inkd-action goto="5-8">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="5-8">
+                <lhy-background style="background-image: url(images/5-8.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Once, Garbo gets a piece of information about the Allies sending a fleet for military and troop transport. He needs to report this news to German in the mail. He mentions that the fleet is camouflaged using miditerean colors. It will be landing on june 10th. Garbo uses June 5th as his stamp time. He intends to send it as a post through air.<br>
+                                <inkd-action class="lhy-mag " goto="9-9"> Garbo chooses to send this mail on time </inkd-action>
+                                <inkd-action class="lhy-mag " goto="5-5"> Garbo chooses to send this mail late </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-9">
+                <lhy-background style="background-image: url(images/9-9.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo sends out his report by air mail, therefore when it arrive Germany it is already late. However, the Germans highly appreciates what Garbo has sent them:” we regret that this report is arriving late, however, it is an extraordinary report in its contents and accuracy.” Since then, the Germans respected Garbo’s words as military bibles. In order to expediate communication, they equipped Garbo with wireless gadgets, switching mails to radios. He also gets the official documents for secret codes and encryption process. The allies decodes a lot of radio.<br>
+                                <inkd-action goto="7-6">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-6" pause-audio="logcabin">
+                <inkd-box style="position: fixed; width:100%; height:100%;" animation="fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/7-3.png); ">
+                </inkd-box>
+                <inkd-box style="position: fixed; width:100%; height:100%;" animation="wait:3s, fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/7-6.png); ">
+                </inkd-box>
+                <inkd-box class="lhy-box " animation="wait:7s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:8s,fadeIn:1s ">
+                            Garbo tells Fred one week before the true African invasion, telling him specifics about exactly when and where the Allies would attack. If the Axis gets the letter, it can potentially harm thousands of hundreds of people's life in Allies. Fred sends this telegram to the Axis. However, the MI5 intentionally delays the letter so it arrived one day late. The trick saves lives and make Garbo look like a miracle.<br>
+                            <inkd-action goto="7-1">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-1">
+                <inkd-box style="position: fixed; width:100%; height:100%;" animation="fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/7-1.png); ">
+                </inkd-box>
+                <inkd-box style="position: fixed; width:100%; height:100%;" animation="wait:3s, fadeIn:2s:1 ">
+                    <lhy-background style="background-image: url(images/7-2.png); ">
+                </inkd-box>
+                <inkd-box class="lhy-box " animation="wait:7s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:8s,fadeIn:1s ">
+                            From then on, Garbo makes German believe his words as military Bibles. On January 1994, Garbo tells Fred that the allies are preparing a massive landing on the contiental europe, he promise Fred that he will keep the Axis updated.<br> To confuse the Germans<br>
+                            <inkd-action class="lhy-mag " goto="7-7"> Garbo sends reports to Berlin at the frequency of 500 reports a day. </inkd-action>
+                            <inkd-action class="lhy-mag " goto="7-7"> Garbo sends reports to Berlin at the frequency of 100 reports a day. </inkd-action>
+                            <inkd-action class="lhy-mag " goto="b-4"> Garbo sends reports to Berlin at the frequency of 10 reports a day. </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-4">
+                <lhy-background style="background-image: url(images/b-4.png); ">
+                    <inkd-box class="lhy-box" animation="wait:2s, fadeIn:1s">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred doesn't believe Garbo anymore and he tells the German that Garbo is a spy who works for the British. He shows many evidences, then the German pretends to believe Garbo. They tell Garbo they will heavily arm in Calais<br>
+                                <inkd-action class="lhy-mag " goto="7-8-b"> Tell the British that they should land on Calais. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="7-9"> Tell the British that they should land on Normandy. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-7">
+                <lhy-background style="background-image: url(images/7-7.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo informs the Germans that the real landing location is not Normandy. Normandy is just used as a military deception trick to distract them from the real location Calais. Meanwhile, the allies allocate fake airplanes and tank models to Calais in order to deceive the Germans. They even send tanks on shore in order to cover the fact that the real landing location is Normandy. Observing the aircrafts and tanks, the Germans believe what Garbo has told them. Hilter orders that all the troops that are on their way to Calais be redirected and head to Calais.<br>
+                                <inkd-action goto="7-8-a">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-8-a" play-audio="happyending">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/map.png); ">
+                </inkd-box>
+
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:3s,fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/army.png); ">
+                </inkd-box>
+
+                <inkd-box class="lhy-box " animation="wait:7s, fadeIn:1s">
+                    <lhy-div>
+                        <inkd-box animation="wait:8s,fadeIn:1s ">
+                            The British army lands on Normandy, then they succeeds. <br>
+                            <inkd-action goto="hp">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="7-8-b" play-audio="happyending">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/map.png); ">
+                </inkd-box>
+
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:3s,fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/army.png); ">
+                </inkd-box>
+
+                <inkd-box class="lhy-box " animation="wait:7s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:8s,fadeIn:1s ">
+                            The German army is armed in Normandy, then the British succeeds. <br>
+                            <inkd-action goto="hp">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-9" play-audio="stamp, fail">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:1s:1">
+                    <lhy-background style="background-image: url(images/7-9-a.png); ">
+                </inkd-box>
+                <inkd-box animation="wait:1.8s,fadeIn:0.1s:1 ">
+                    <img style="position:fixed;top:150px;right:428px;width:40%;height:40%;" src="images/7-9-b.png">
+                </inkd-box>
+
+                <inkd-box class="lhy-box " animation="wait:3s, fadeIn:1s ">
+                    <lhy-div style="margin-bottom:100px; ">
+                        <inkd-box animation="wait:4s,fadeIn:1s ">
+                            The German army is armed in Normandy, then the Allies is defeated. The World War II will continue..
+                            <br>
+                            <inkd-action goto="1">
+                                <img style="width:10%;" src="images/restart.png">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="5-5">
+                <lhy-background style="background-image: url(images/5-5.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Even though Fred thinks Garbo’s reports are valueable because of its accuracy, he wonders why every time he misses it by a hair time wise. Also, he thinks there are some serious errors that are unreasonable. Fred sends a request to his supervisor asking for permission to go to London to monitor Garbo.<br>
+                                <inkd-action goto="6-1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="6-1">
+                <lhy-background style="background-image: url(images/6-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo’s work has been steadfast, until one day, Fred overhears Garbo secretively receives a phone call while he is in the bathroom. He vaguely makes out of some key words, “lake, log cabin.” Fred thinks to himself, “what person could Garbo meet except for some other agency that he is been hiding from me? Now, Garbo is finally gonna give his show away?”<br>
+                                <inkd-action goto="6-2">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="6-2">
+                <lhy-background style="background-image: url(images/6-2.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                When Garbo walks out of the bathroom, he notices a Cigar end that belongs to Fred.<br>
+                                <inkd-action class="lhy-mag " goto="b-5">Garbo decides to change the plan. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="b-6">Garbo decides to cancel the plan. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-6">
+                <inkd-box class="lhy-box " animation="fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:1s,fadeIn:1s ">
+                            The next day, Fred asks Garbo whether he will go ouside, Garbo says no and he will stay in the office all day.<br>
+                            <inkd-action goto="b-4">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="b-5" play-audio="stalk1">
+                <inkd-box class="lhy-box" animation="fadeIn:1s">
+                    <lhy-div>
+                        <inkd-box animation="wait:1s,fadeIn:1s">
+                            The next day, Fred stalks Garbo.<br>
+                            <inkd-action class="lhy-mag " goto="6-4"> Garbo walks into the train station </inkd-action>
+                            <inkd-action class="lhy-mag " goto="9-10ex"> Garbo walks to a crossroad. </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-10ex">
+                <lhy-background style="background-image: url(images/9-10ex.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo quickly disappears in the crowd when a a big car passes by, Fred runs to look for Garbo.
+                                <br>
+                                <inkd-action goto="9-10" pause-audio="stalk1">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+
+            <inkd-node name="9-10" play-audio="logcabin">
+                <lhy-background style="background-image: url(images/9-10.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Finally, he hears that Garbo is talking with a woman in front of a house. Fred bursts in and sees Garbo is sleeping with a hooker. However, he glances a man lying under the bed when he leaves.
+                                <br>
+                                <inkd-action goto="b-4" pause-audio="logcabin">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <!--
+<inkd-node name="b-5">
+    <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+        <lhy-div>
+            <inkd-box animation="wait:2s,fadeIn:1s ">
+                The next day, Fred stalks Garbo.<br>
+                <inkd-action class="lhy-mag " goto="b-5"> Garbo walks into the train station </inkd-action>
+                <inkd-action class="lhy-mag " goto="9-10"> Garbo walks to a crossroad. </inkd-action>
+            </inkd-box>
+        </lhy-div>
+    </inkd-box>
+</inkd-node>
+-->
+
+            <inkd-node name="6-4">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/6-4ex.png); ">
+                </inkd-box>
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="wait:4s, fadeIn:2s:1">
+                    <lhy-background style="background-image: url(images/6-4.png); ">
+                </inkd-box>
+                <inkd-box class="lhy-box " animation="wait:8s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:9s,fadeIn:1s ">
+                            The flood of people makes it hard to move quickly. Garbo boards the train and leans on the door casually.<br>
+                            <inkd-action class="lhy-mag " goto="6-7-a"> As usual, Garbo highlights important information on the newspaper and take notes on his notebook all the way until it is his stop. Garbo puts the newspaper back in place and gets off the train. </inkd-action>
+                            <inkd-action class="lhy-mag " goto="6-7-b"> When the train comes to a stop at a station Garbo gets off the train to buy himself a lunch box at a food vendor. </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="6-7-a" pause-audio="stalk1" play-audio="stalk2">
+                <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:1s:1">
+                    <lhy-background style="background-image: url(images/6-5.png); ">
+                </inkd-box>
+
+                <inkd-box animation="wait:3s,fadeIn:1s:1">
+                    <lhy-background style="background-image: url(images/6-65.png);">
+                </inkd-box>
+
+                <inkd-box class="lhy-box " animation="wait:5s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:6s,fadeIn:1s ">
+                            As soon as Garbo makes it out of the train station, he walks straight into a little patch of woods, from afar, Fred tracks Garbo’s movements, he sees a little creek and a silhouette of a woman. He thinks to himself” is it a female spy?” Garbo appears to be increasingly cautious at this moment, He slows down to look around his surroundings. This suspicious act confirms Fred’s judgement that Fred is a double spy.
+                            <br>
+                            <inkd-action goto="6-7-b">
+                                <img style="width:20%; " src="images/gotonext.gif ">
+                            </inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="6-7-b">
+                <lhy-background style="background-image: url(images/6-7.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo walks up to the woman with caution, he checks to make sure there is no one nearby. He then hugs her from behind. The woman looks back and they start to kiss each other.
+                                <br>
+                                <inkd-action goto="9-11b">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-11b" pause-audio="stalk2" play-audio="logcabin">
+                <lhy-background style="background-image: url(images/9-11b.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo wraps his arm around the woman’s waist. Fred is sure that this is Garbo’s deceptive trick. He walks up to the cabin to eavesdrop. Garbo and the woman flirt with each other. Fred hears the loud noise from their bantering with each other. Fred is still not convinced. He pokes a hole on the window and he sees that Garbo lies naked with the woman in his arm. Fred shakes his head:” young people these days, he has his wife, now he is in bed with another woman. unbelievable!” From then on, Fred dismisses most of his doubtful thoughts about Garbo.
+                                <br>
+                                <inkd-action goto="9-11a">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-11a">
+                <lhy-background style="background-image: url(images/9-11a.png); ">
+                    <img style="position:fixed;top:150px;right:428px;width:40%;height:40%;" src="images/6-6.png">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Actually, Fred does not know that Garbo had already left his message on the newspaper on the train to, Harris, Garbo’s supervisor from the Allies. Since Garbo notices the Cigar end on the train. He reckons that Fred must be on the train because that is his signature cigar and no one else around can afford. Garbo improvises and changes his plan to meet with Harris. Knowing that Fred is suspicious of him, Garbo files a truthful but not useful report the next day, making Fred trust him even more.
+                                <br>
+                                <inkd-action goto="7-6" pause-audio="logcabin">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="3-1-b">
+                <lhy-background style="background-image: url(images/3-1.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Harris thinks this reason isn’t good enough and decides to decline him again.
+                                <br>
+                                <inkd-action goto="6-3">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="6-3">
+                <lhy-background style="background-image: url(images/6-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo is seen going out from MI5 by Fred who follows him all the time.<br>
+                                <inkd-action class="lhy-mag " goto="9-3-c"> Garbo runs away immediately. </inkd-action>
+                                <inkd-action class="lhy-mag " goto="7-3-a"> Garbo walks to the front of Fred. </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="9-3-c" play-audio="killgarbo">
+                <lhy-background style="background-image: url(images/9-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Fred shots Garbo, Garbo dies.<br>
+                                <inkd-action goto="1">
+                                    <img style="width:20%; " src="images/restart.png">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="7-3-a">
+                <lhy-background style="background-image: url(images/7-3.png); ">
+                    <inkd-box class="lhy-box " animation="wait:2s, fadeIn:1s ">
+                        <lhy-div>
+                            <inkd-box animation="wait:3s,fadeIn:1s ">
+                                Garbo tells Fred that he has cheated the British that he pretends to work for them, then he can get more secret information.
+                                <br>
+                                <inkd-action goto="5-8">
+                                    <img style="width:20%; " src="images/gotonext.gif ">
+                                </inkd-action>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+            </inkd-node>
+
+            <inkd-node name="hp">
+                <inkd-box animation="wait:8s, fadeOut:2s">
+                    <inkd-box style="position: fixed; width:100%; height:100%; " animation="fadeIn:1s:1">
+                        <lhy-background style="background-image: url(images/7-8-a.png); ">
+                    </inkd-box>
+
+                    <inkd-box animation="wait:1.8s,fadeIn:0.1s:1 ">
+                        <img style="position:fixed;top:150px;right:428px;width:40%;height:40%;" src="images/7-8-b.png">
+                    </inkd-box>
+
+                    <inkd-box class="lhy-box" animation="wait:3s, fadeIn:1s ">
+                        <lhy-div style="margin-bottom:100px">
+                            <inkd-box animation="wait:4s,fadeIn:1s ">
+                                Garbo's success saved millions of people's lives, the change he made in the Normandy War changed the World War II, indirectly changed the world. Garbo did what he had said.
+                                <br>
+                            </inkd-box>
+                        </lhy-div>
+                    </inkd-box>
+                </inkd-box>
+
+
+                <inkd-box animation="wait:10s, fadeIn:2s">
+                    <lhy-background style="background-image: url(images/final1.png);">
+                </inkd-box>
+
+                <inkd-box class="lhy-box " animation="wait:10s, fadeIn:1s ">
+                    <lhy-div>
+                        <inkd-box animation="wait:11s,fadeIn:1s ">
+                            Garbo's success saved millions of people's lives, the change he made in the Normandy War changed the World War II, indirectly changed the world. Garbo did what he had said. German pays heavy price in this Campaign. It marks the beginning of the end of Second World War. The Allies finally won WWII at the end. Obviously, Garbo plays a very important role in WWII victory. Interestingly, Garbo is awarded the Iron Cross Second Class for his “effort” in German war. He also receives MBE from King George VI at the same time.
+                            <br>
+                            <inkd-action class="lhy-mag " goto="1" pause-audio="happyending, bgm">Play again</inkd-action>
+                        </inkd-box>
+                    </lhy-div>
+                </inkd-box>
+            </inkd-node>
+        </inkd-cyoa>
+</inkd-content>

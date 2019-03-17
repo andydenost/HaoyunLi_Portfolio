@@ -1,0 +1,261 @@
+<!--PUT YOUR CUSTOM CSS BETWEEN THESE TWO
+    STYLE TAGS. YOU MUST NOT USE THE STYLE TAG
+    IN YOUR STORY FILES, BUT YOU CAN USE THE STYLE
+    PROPERTY IN STORY FILES.
+
+    THIS FILE IS THE BEST PLACE TO PUT YOUR CUSTOM
+    CSS IF YOU WANT TO ENSURE THAT IT WORKS WITH
+    INKDML.
+-->
+
+<style is="custom-style">
+    /*
+    EXAMPLE CLASS. FEEL FREE TO DELETE. ALSO, REMEMBER
+    THAT COMMENTS ARE CREATED DIFFERENTLY
+    WHEN INSIDE OF A style TAG!
+    */
+    
+    .green-box {
+        background-color: green;
+    }
+    /* DEFAULT STYLES */
+    
+    inkd-action {
+        cursor: url(images/maglass3.png), crosshair;
+    }
+    
+    inkd-node {
+        display: block;
+        margin: 0 auto;
+        padding: 1.2em;
+        width: 100%;
+        /*        border: 0.06em solid #d5d5d5 ;*/
+        background-color: transparent;
+        cursor: url(images/maglass1.png), crosshair;
+    }
+    
+    inkd-node img,
+    inkd-node video {
+        position: relative;
+        /*
+        margin: 0;
+        max-width: 600px;
+        max-height: 400px;
+*/
+    }
+    
+    inkd-button {
+        appearance: none;
+        outline: none;
+        display: inline-block;
+        font-size: 1rem;
+        font-family: inherit;
+        font-weight: normal;
+        line-height: inherit;
+        text-align: center;
+        text-transform: none;
+        text-decoration: none;
+        text-indent: 0;
+        padding: 0.5em 1em;
+        margin: 0;
+        border: 0.06em solid #d5d5d5;
+        border-spacing: 0;
+        border-radius: 0.31em;
+        background-color: darkgrey;
+        cursor: url(images/maglass3.png), crosshair;
+        /*        max-width: 100px;
+/*        min-width: 50px;*/
+    }
+    
+    inkd-button:not([disabled]):hover {
+        background-color: dimgray;
+        color: #000;
+        border: 0.06em solid #000;
+    }
+    
+    inkd-button[disabled] {
+        background-color: #959595;
+    }
+    /*    Haoyun_Li style*/
+    
+    lhy-footer {
+        position: fixed;
+        bottom: 50px;
+        left: 200px;
+        width: 1000px;
+        text-align: left;
+        background-color: blue;
+        opacity: 0.6;
+        font-family: fantasy;
+        color: white;
+    }
+    /*
+    lhy-righter{
+        position: absolute;
+        top:500px;
+        right: 1px;
+        background-color: transparent;
+        width: 100%;
+        text-align: center;
+    }
+*/
+    
+    .start-button {
+        position: fixed;
+        top: 480px;
+        left: 800px;
+        border: none;
+        /*        max-width: 100px;*/
+        /*        min-width: 50px;*/
+    }
+    
+    .start-button:not([disabled]):hover {
+        position: fixed;
+        /*
+        top: 500px;
+        right: 100px;
+*/
+        border: none;
+        /*        max-width: 100px;*/
+        /*        min-width: 50px;*/
+    }
+    
+    lhy-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 1280px 720px;
+        /*        zoom: 1;*/
+    }
+    
+    lhy-choice1 {
+        position: fixed;
+        top: 100px;
+        right: 100px;
+        width: 400px;
+        background-color: burlywood;
+        opacity: 0.8;
+        font-family: fantasy;
+        color: black;
+    }
+    
+    lhy-choice2 {
+        position: fixed;
+        top: 300px;
+        right: 100px;
+        width: 400px;
+        background-color: burlywood;
+        opacity: 0.8;
+        font-family: fantasy;
+        color: black;
+    }
+    
+    lhy-choice3 {
+        position: fixed;
+        top: 500px;
+        right: 100px;
+        width: 400px;
+        background-color: burlywood;
+        opacity: 0.8;
+        font-family: fantasy;
+        color: black;
+    }
+    /*
+    
+    lhy-div {
+        position: absolute;
+        border: 0;
+        padding: 0.4in;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        opacity: 0.75;
+        font-size: 20px;
+        width: 800px;
+        bottom: 0.5in;
+        left: 300px;
+        line-height: 180%;
+        text-align: justify;
+    }
+*/
+    
+    lhy-div {
+        position: absolute;
+        border: 0;
+        padding: 0.4in;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        opacity: 0.75;
+        font-size: 20px;
+        width: 800px;
+        bottom: 0;
+        left: 250px;
+        line-height: 180%;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+    /*    .wrap {}*/
+    
+    .lhy-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1280px;
+        height: 720px;
+        text-align: center;
+    }
+    
+    lhy-bgi {
+        position: fixed;
+        border: 0;
+        padding: 0.4in;
+        border-radius: 10px;
+        color: white;
+        background-color: black;
+        opacity: 0.70;
+        font-size: 20px;
+        top: 500px;
+        bottom: ;
+        left: 550px;
+        line-height: 180%;
+        text-align: justify;
+    }
+    
+    .lhy-big:hover {
+        font-size: 2rem;
+    }
+    
+    .lhy-mag {
+        text-align: center;
+        display: block;
+        transition: transform 1s, color 0.5s;
+        -moz-transition: -moz-transform 1s;
+        transform: scale(1);
+        color: #990000;
+    }
+    
+    .lhy-mag:hover {
+        transform: scale(1.12);
+        color: #ff3333;
+    }
+    /*
+    .lhy-box {
+        width: 1280px;
+        height: 720px;
+        text-align: center;
+    }
+    
+*/
+    
+    .lhy-endf {
+        position: fixed;
+        width: 400px;
+    }
+
+</style>

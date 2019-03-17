@@ -1,0 +1,99 @@
+<!--1.next -->
+<inkd-node name="3-1-a">
+    <lhy-background style="background-image: url(images/3-1.png); ">
+        <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+            <lhy-div>
+                <inkd-box animation="wait:2s,fadeIn:1s ">
+                    Garbo decided to volunteer as a spy.<br> He is interviewed by government official in the British embassy.<br> However...
+                    <br> He was declined.<br>
+                    <inkd-action goto="4-1">
+                        <img style="width:20%; " src="images/gotonext.gif ">
+                    </inkd-action>
+                </inkd-box>
+            </lhy-div>
+        </inkd-box>
+</inkd-node>
+
+<!--      -1choices----------------------------------------------------------------------------->
+<inkd-node name="4-1">
+    <lhy-background style="background-image: url(images/4-1.png); ">
+        <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s">
+            <lhy-div>
+                <inkd-box animation="wait:2s,fadeIn:1s">
+                    Garbo called the german embassy.<br> The voice on the line, Fredrico, tells him to show up the following day at a cafe shop at 4:30.<br>
+                    <inkd-action class="lhy-mag " goto="4-2">shows up at 4:30 as intructed. </inkd-action>
+                </inkd-box>
+            </lhy-div>
+        </inkd-box>
+</inkd-node>
+<!--      ----------------2choices-------------------------------------------------------------->
+<inkd-node name="4-2">
+    <lhy-background style="background-image: url(images/4-2.png); ">
+        <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+            <lhy-div>
+                <inkd-box animation="wait:2s,fadeIn:1s ">
+                    Garbo declares that he wants to be a spy for the Axis. Fed ask garbo what are his reasons.<br> Garbo had to explain why he can be a perfect spy.<br> He lies:<br>
+                    <inkd-action class="lhy-mag " goto="3-2"> My whole family back in Spain is passionate about Facism. </inkd-action>
+                    <inkd-action class="lhy-mag " goto="5-1"> I have an English passport! </inkd-action>
+                </inkd-box>
+            </lhy-div>
+        </inkd-box>
+</inkd-node>
+
+<!-- black------------------------------------------------------>
+<inkd-node name="3-1-a">
+    <inkd-box class="lhy-box " animation="wait:1s, fadeIn:1s ">
+        <lhy-div>
+            <inkd-box animation="wait:2s,fadeIn:1s ">
+                Garbo decided to volunteer as a spy.<br> He is interviewed by government official in the British embassy.<br> However...
+                <br> He was declined.<br>
+                <inkd-action goto="4-1">
+                    <img style="width:20%; " src="images/gotonext.gif ">
+                </inkd-action>
+            </inkd-box>
+        </lhy-div>
+    </inkd-box>
+</inkd-node>
+
+
+
+
+
+
+
+
+
+
+<!--3.button may not use-->
+<inkd-action goto="outside" style="position:fixed; top:80px; right:100px;">
+    <inkd-mouse>
+        <img style="position:fixed; width:5%;" src="images/choice.png">
+        <inkd-over>
+            <lhy-choice1>
+                choice 1.choice 1.choice 1.choice 1.choice 1.choice 1.
+            </lhy-choice1>
+        </inkd-over>
+    </inkd-mouse>
+</inkd-action>
+
+<inkd-action goto="outside" style="position:fixed; top:280px; right:100px;">
+    <inkd-mouse>
+        <img style="position:fixed; width:5%;" src="images/choice.png">
+        <inkd-over>
+            <lhy-choice2>
+                choice 2.choice 2.choice 2.choice 2.choice 2.choice 2.
+            </lhy-choice2>
+        </inkd-over>
+    </inkd-mouse>
+</inkd-action>
+
+<inkd-action goto="outside" style="position:fixed; top:480px; right:100px;">
+    <inkd-mouse>
+        <img style="position:fixed; width:5%;" src="images/choice.png">
+        <inkd-over>
+            <lhy-choice3>
+                choice 3.choice 3.choice 3.choice 3.choice 3.choice 3.choice 3.
+            </lhy-choice3>
+        </inkd-over>
+    </inkd-mouse>
+</inkd-action>
