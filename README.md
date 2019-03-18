@@ -10,14 +10,14 @@
 2.游戏充分利用自动寻路算法让病原体自动寻找入侵路径和让免疫细胞自动追踪敌人并触发攻击。
 3.游戏运用射线的碰撞检测来解决准心瞄准位置与实际子弹击中位置偏差的问题。
 
-### [围接棋小游戏](HaoyunLi_Portfolio/Gonnect/)
+### [围接棋小游戏 Gonnect](HaoyunLi_Portfolio/Gonnect/)
 游戏结合围棋的胜利规则，加上如果棋子能够连接上下边界或左右边界则胜利的规则，称为围接棋。
 项目关键点：
 1.运用深度搜索算法判断落子位置有没有“气”，从而实现提子功能。
 2. 运用A\*算法实现判断是否有一方的棋子已经连接了上下边或左右边的胜利条件。
 3. 实现打劫，以及通过二维数组对比的方式禁止连环打劫。
 
-### [太空模拟小游戏](HaoyunLi_Portfolio/Universe_Simulation/LiHaoyun_SimVersion4/)
+### [太空模拟小游戏 Universe Simulation](HaoyunLi_Portfolio/Universe_Simulation/LiHaoyun_SimVersion4/)
 游戏模拟了人造卫星、宇宙垃圾、星球之间存在的各种力的作用与影响，包括完全弹性碰撞与万有引力。
 项目关键点：
 1. 引入向量来计算不断变化的力对卫星和宇宙垃圾的作用。
