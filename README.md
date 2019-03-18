@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# 作品集
 
-You can use the [editor on GitHub](https://github.com/andydenost/HaoyunLi_Portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+这里是李昊运的一些小积累
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### [Immune War (毕业设计)](HaoyunLi_Portfolio/Thesis_Immune_War/)
+用Unity3D开发的一款结合了第一人称射击与塔防模式的小游戏。
+主题是四种免疫细胞（B细胞、T细胞、中性粒白细胞、巨噬细胞）与入侵的病原体（细菌、病毒）之间的战斗，成功抵御一定次数的入侵则游戏胜利，否则失败。玩家可自身作为免疫细胞以第一人称的视角参与战斗，如操作B细胞射出抗体子弹或者操作巨噬细胞用钩爪吞噬病原体，也可设置B细胞炮台、中性粒白细胞和T细胞守卫来让他们自动攻击敌人。
+项目关键点：
+1.游戏充分利用了U3D的碰撞检测机制来判断可侦测范围内的敌人的位置与距离，从而实现免疫细胞的自动射击与追踪攻击的功能。
+2.游戏充分利用自动寻路算法让病原体自动寻找入侵路径和让免疫细胞自动追踪敌人并触发攻击。
+3.游戏运用射线的碰撞检测来解决准心瞄准位置与实际子弹击中位置偏差的问题。
 
-### Markdown
+### [围接棋小游戏](HaoyunLi_Portfolio/Gonnect/)
+游戏结合围棋的胜利规则，加上如果棋子能够连接上下边界或左右边界则胜利的规则，称为围接棋。
+项目关键点：
+1.运用深度搜索算法判断落子位置有没有“气”，从而实现提子功能。
+2. 运用A\*算法实现判断是否有一方的棋子已经连接了上下边或左右边的胜利条件。
+3. 实现打劫，以及通过二维数组对比的方式禁止连环打劫。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### [太空模拟小游戏](HaoyunLi_Portfolio/Universe_Simulation/LiHaoyun_SimVersion4/)
+游戏模拟了人造卫星、宇宙垃圾、星球之间存在的各种力的作用与影响，包括完全弹性碰撞与万有引力。
+项目关键点：
+1. 引入向量来计算不断变化的力对卫星和宇宙垃圾的作用。
+2. 解决完全弹性碰撞中的非对心斜碰问题。
 
-```markdown
-Syntax highlighted code block
+### [Code:Garbo](HaoyunLi_Portfolio/Code_Garbo/)
+互动叙事类网页游戏，在实验室提供的inkdML脚本库下通过JavaScript编写。主角是二战中的英国间谍，卧底在德国，通过一系列谎言帮助二战取得胜利的故事。
+在小组中负责故事线逻辑的梳理以及全部程序部分的编写。
+解决项目关键点：
+1. 避免了故事线无限循环的问题。
+2. 让交互方式更加美观和容易理解。
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/andydenost/HaoyunLi_Portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
