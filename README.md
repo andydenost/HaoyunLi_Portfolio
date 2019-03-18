@@ -2,7 +2,7 @@
 
 这里是李昊运的一些小积累
 
-### [Immune War (毕业设计)](HaoyunLi_Portfolio/Thesis_Immune_War/)
+### [Immune War (毕业设计)](https://github.com/andydenost/HaoyunLi_Portfolio/tree/master/Thesis_Immune_War)
 用Unity3D开发的一款结合了第一人称射击与塔防模式的小游戏。
 主题是四种免疫细胞（B细胞、T细胞、中性粒白细胞、巨噬细胞）与入侵的病原体（细菌、病毒）之间的战斗，成功抵御一定次数的入侵则游戏胜利，否则失败。玩家可自身作为免疫细胞以第一人称的视角参与战斗，如操作B细胞射出抗体子弹或者操作巨噬细胞用钩爪吞噬病原体，也可设置B细胞炮台、中性粒白细胞和T细胞守卫来让他们自动攻击敌人。
 项目关键点：
